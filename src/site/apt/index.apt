@@ -1,0 +1,9 @@
+Introduction
+
+  Ce projet a pour but de valider les techo osgi avec spring DM et ainsi de fournir un exemple simple d'utilisation facilement recopiable. TC-OSGI definit un project hello world comportant trois bundles pour un consomateur, un fournisseur et un launcher.
+  
+  Le launcher est indispensable (en l'etat de cette version de l'utilisation de spring) car spring n'est pas capable de lancer lui meme les bundles en dependance, il faut donc un composant osgi standart pour le faire. 
+  
+  A noter que si les deux bundles a lancer sont de type spring aucun temps de latence entre les deux lancements n'est a respecter pour l'association des bean et des services. Par contre lorsque les bundles a demarrer sont heterogenes, il est necessaire de respecter un temps d'enregistrement pour que les bundles (et service) spring soit accessible dans le bundle contexte osgi standard (l'exemple typique est le cas de apt-gui qui utilise gui-utils, ce dernier etant un bundle spring et apt-gui un bundle osgi standard). Dans l'autre sens, ce temps n'existe pas, spring acceder dans latence au bundle contexte osgi standard de equinox.
+  
+  

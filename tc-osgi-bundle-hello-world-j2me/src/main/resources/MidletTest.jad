@@ -1,0 +1,14 @@
+ImageName-2: /images/leaf.jpg
+ImageName-1: /images/duke.png
+MIDlet-Jar-Size: 83383
+MIDlet-1: New Midlet,/icons/demo.png,example.bluetooth.demo.DemoMIDlet
+MIDlet-Jar-URL: MidletTest.jar
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Version: 1.0.0
+MIDlet-Name: MidletTest Midlet Suite
+MIDlet-Vendor: Midlet Suite Vendor
+MicroEdition-Profile: MIDP-2.1
+ImageTitle-3: The leaf (png)
+ImageTitle-2: The leaf (jpg)
+ImageName-3: /images/leaf.png
+ImageTitle-1: Duke (png)

@@ -1,0 +1,35 @@
+Hello world Software Design Description
+
+* Liste des projets
+
+** @req SDD_HELLO_WORLD_010
+
+  Hello world defini un bundle fournisseur de message helloworld utilisant spring DM
+  
+        * @version 0.1.0
+        
+        * @track SRS_HELLO_WORLD_010
+        
+        * @depend SRS_TC_190
+        
+** @req SDD_HELLO_WORLD_020
+
+  Hello world defini un bundle consommateur de message helloworld utilisant spring DM 
+  
+        * @version 0.1.0
+        
+        * @track SRS_HELLO_WORLD_020
+        
+        * @depend SRS_TC_190
+        
+** @req SDD_HELLO_WORLD_030
+
+  Hello world defini un bundle launcher permettant de lancer automatiquement les bundles fournisseur consommateur dans ce ordre et de les arreter dans l'autre ordre
+  
+  Le bundle utilise la technologie osgi standart avec un activator 
+  
+        * @version 0.1.1
+        
+        * @track SRS_HELLO_WORLD_010, SRS_HELLO_WORLD_020
+        
+        * @depend SDD_HELLO_WORLD_010, SDD_HELLO_WORLD_020
