@@ -1,27 +1,29 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.tc.module</groupId>
-  <artifactId>tc-hello-world-module</artifactId>
-  <name>${project.artifactId}-${project.version}</name>
-  <packaging>pom</packaging>
-  <version>0.2.0-SNAPSHOT</version>
-  
-  <parent>
-    <groupId>org.tc.parent</groupId>
-    <artifactId>tc-parent</artifactId>
-    <version>0.8.0</version>
-  </parent>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.tc.module</groupId>
+	<artifactId>tc-hello-world-module</artifactId>
+	<name>${project.artifactId}-${project.version}</name>
+	<packaging>pom</packaging>
+	<version>0.2.0-SNAPSHOT</version>
 
-  <modules>
-  	<module>tc-osgi-bundle-hello-world-provider</module>
-  	<module>tc-osgi-bundle-hello-world-consumer</module>
-  	<module>tc-osgi-bundle-hello-world-launcher</module>
-    <module>tc-osgi-bundle-hello-world-swing</module>
-    <module>tc-osgi-bundle-hello-world-j2me</module>
-  </modules>
-  
+	<parent>
+		<groupId>org.tc.parent</groupId>
+		<artifactId>tc-parent</artifactId>
+		<version>0.8.0</version>
+	</parent>
 
-    
-     
- 
+	<modules>
+		<module>tc-osgi-bundle-hello-world-provider</module>
+		<module>tc-osgi-bundle-hello-world-consumer</module>
+<!-- 		<module>tc-osgi-bundle-hello-world-spring-provider</module> -->
+<!-- 		<module>tc-osgi-bundle-hello-world-spring-consumer</module> -->
+<!-- 		<module>tc-osgi-bundle-hello-world-spring-launcher</module> -->
+<!-- 		<module>tc-osgi-bundle-hello-world-swing</module> -->
+<!-- 		<module>tc-osgi-bundle-hello-world-j2me</module> -->
+	</modules>
+
+
+
+
+
 </project>
