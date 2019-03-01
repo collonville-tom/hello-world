@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd" default-lazy-init="true">
+             
+	<bean id="helloWorldConsumer" class="org.tc.osgi.bundle.hello.world.blueprint.consumer.module.bean.HelloWorldConsumer" init-method="start" lazy-init="false">
+		<property name="service" ref="worldServiceRef" />
+	</bean>
+	
+	<osgi:reference id="worldServiceRef" interface="org.tc.osgi.bundle.hello.world.provider.module.service.IWorldService" />
+	
+</beans>

@@ -1,4 +1,4 @@
-package org.tc.osgi.bundle.hello.world.consumer.module.bean;
+package org.tc.osgi.bundle.hello.world.blueprint.consumer.module.bean;
 
 
 import org.tc.osgi.bundle.hello.world.provider.module.service.IWorldService;
