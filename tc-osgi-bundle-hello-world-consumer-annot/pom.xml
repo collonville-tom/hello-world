@@ -1,14 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.tc.osgi.bundle.hello.world</groupId>
-	<artifactId>tc-osgi-bundle-hello-world-blueprint-consumer</artifactId>
+	<groupId>org.tc.osgi.bundle</groupId>
+	<artifactId>tc-osgi-bundle-hello-world-consumer-annot</artifactId>
 	<name>${project.artifactId}-${project.version}</name>
 	<packaging>bundle</packaging>
 	<version>${build}${snapshot}</version>
 
 	<properties>
 		<build>0.2.0</build>
-		<hw.producer.version>0.2.0</hw.producer.version>
+		<hw-provider.version>0.2.0</hw-provider.version>
 		<snapshot>-SNAPSHOT</snapshot>
 	</properties>
 
@@ -32,6 +32,9 @@
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
+				<version>4.1.0</version>
+				<extensions>true</extensions>
+				<inherited>true</inherited>
 			</plugin>
 		</plugins>
 	</build>
@@ -39,11 +42,12 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.tc.osgi.bundle.hello.world</groupId>
-			<artifactId>tc-osgi-bundle-hello-world-provider</artifactId>
-			<version>${hw.producer.version}${snapshot}</version>
+			<artifactId>tc-osgi-bundle-hello-world-provider-annot</artifactId>
+			<version>${hw-provider.version}${snapshot}</version>
 			<classifier>assembly</classifier>
 			<type>bundle</type>
 		</dependency>
 	</dependencies>
+
 
 </project>

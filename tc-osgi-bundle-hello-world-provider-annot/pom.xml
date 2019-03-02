@@ -1,14 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.tc.osgi.bundle.hello.world</groupId>
-	<artifactId>tc-osgi-bundle-hello-world-blueprint-consumer</artifactId>
+	<artifactId>tc-osgi-bundle-hello-world-provider-annot</artifactId>
 	<name>${project.artifactId}-${project.version}</name>
 	<packaging>bundle</packaging>
 	<version>${build}${snapshot}</version>
 
 	<properties>
 		<build>0.2.0</build>
-		<hw.producer.version>0.2.0</hw.producer.version>
 		<snapshot>-SNAPSHOT</snapshot>
 	</properties>
 
@@ -28,21 +27,42 @@
 						<manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
 					</archive>
 				</configuration>
+				<executions>
+					<execution>
+						<id>assembly</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+						<configuration>
+							<classifier>assembly</classifier>
+							<includes>
+								<include>**/*.class</include>
+								<include>**/*.properties</include>
+								<include>**/*.xml</include>
+							</includes>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
+				<version>4.1.0</version>
+				<extensions>true</extensions>
+				<inherited>true</inherited>
+				<configuration>
+					<exportScr>true</exportScr>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 
 	<dependencies>
 		<dependency>
-			<groupId>org.tc.osgi.bundle.hello.world</groupId>
-			<artifactId>tc-osgi-bundle-hello-world-provider</artifactId>
-			<version>${hw.producer.version}${snapshot}</version>
-			<classifier>assembly</classifier>
-			<type>bundle</type>
+			<groupId>org.osgi</groupId>
+			<artifactId>osgi.cmpn</artifactId>
+			<version>6.0.0</version>
 		</dependency>
 	</dependencies>
 

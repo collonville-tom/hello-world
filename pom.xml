@@ -13,10 +13,12 @@
 	</parent>
 
 	<modules>
-		<module>tc-osgi-bundle-hello-world-provider</module>
-		<module>tc-osgi-bundle-hello-world-consumer</module>
-		<module>tc-osgi-bundle-hello-world-blueprint-consumer</module>
-		<module>tc-osgi-bundle-hello-world-springdm-consumer</module>
+<!-- 		<module>tc-osgi-bundle-hello-world-provider</module> -->
+<!-- 		<module>tc-osgi-bundle-hello-world-consumer</module> -->
+<!-- 		<module>tc-osgi-bundle-hello-world-blueprint-consumer</module> -->
+<!-- 		<module>tc-osgi-bundle-hello-world-springdm-consumer</module> -->
+		<module>tc-osgi-bundle-hello-world-provider-annot</module>
+		<module>tc-osgi-bundle-hello-world-consumer-annot</module>
 <!-- 		<module>tc-osgi-bundle-hello-world-spring-provider</module> -->
 <!-- 		<module>tc-osgi-bundle-hello-world-spring-consumer</module> -->
 <!-- 		<module>tc-osgi-bundle-hello-world-spring-launcher</module> -->

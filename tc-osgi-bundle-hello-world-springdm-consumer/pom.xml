@@ -32,7 +32,6 @@
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
-				<extensions>true</extensions>
 			</plugin>
 		</plugins>
 	</build>
@@ -44,7 +43,6 @@
 			<version>${hw.producer.version}${snapshot}</version>
 			<classifier>assembly</classifier>
 			<type>bundle</type>
-<!-- 			<scope>provided</scope> -->
 		</dependency>
 	</dependencies>
 
