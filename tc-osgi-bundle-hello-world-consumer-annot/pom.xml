@@ -28,6 +28,23 @@
 						<manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
 					</archive>
 				</configuration>
+				<executions>
+					<execution>
+						<id>assembly</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+						<configuration>
+							<classifier>assembly</classifier>
+							<includes>
+								<include>**/*.class</include>
+								<include>**/*.properties</include>
+								<include>**/*.xml</include>
+							</includes>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.felix</groupId>
@@ -35,6 +52,9 @@
 				<version>4.1.0</version>
 				<extensions>true</extensions>
 				<inherited>true</inherited>
+				<configuration>
+					<exportScr>true</exportScr>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
