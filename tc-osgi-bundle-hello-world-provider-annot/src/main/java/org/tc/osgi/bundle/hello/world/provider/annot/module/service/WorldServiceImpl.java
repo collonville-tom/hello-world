@@ -9,8 +9,7 @@ public class WorldServiceImpl implements IWorldService
 {
 	@Activate
 	public void start() throws Exception {
-		System.out.println("Demarrage du bundle Provider via SCR");
-		
+		System.out.println("Demarrage du bundle Provider via SCR");	
 	}
 
 	@Deactivate
