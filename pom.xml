@@ -4,12 +4,12 @@
 	<artifactId>tc-hello-world-module</artifactId>
 	<name>${project.artifactId}-${project.version}</name>
 	<packaging>pom</packaging>
-	<version>0.2.0-SNAPSHOT</version>
+	<version>0.11.0-SNAPSHOT</version>
 
 	<parent>
 		<groupId>org.tc.parent</groupId>
 		<artifactId>tc-parent</artifactId>
-		<version>0.8.0</version>
+		<version>0.11.0-SNAPSHOT</version>
 	</parent>
 
 	<modules>
@@ -20,11 +20,11 @@
 		<module>tc-osgi-bundle-hello-world-provider-annot</module>
 		<module>tc-osgi-bundle-hello-world-consumer-annot</module>
 		
-<!-- 		<module>tc-osgi-bundle-hello-world-spring-provider</module> -->
-<!-- 		<module>tc-osgi-bundle-hello-world-spring-consumer</module> -->
-<!-- 		<module>tc-osgi-bundle-hello-world-spring-launcher</module> -->
-<!-- 		<module>tc-osgi-bundle-hello-world-swing</module> -->
-<!-- 		<module>tc-osgi-bundle-hello-world-j2me</module> -->
+ 		<module>tc-osgi-bundle-hello-world-spring-provider</module> 
+ 		<module>tc-osgi-bundle-hello-world-spring-consumer</module> 
+ 		<module>tc-osgi-bundle-hello-world-spring-launcher</module> 
+ 		<module>tc-osgi-bundle-hello-world-swing</module> 
+ 		<module>tc-osgi-bundle-hello-world-j2me</module> 
 	</modules>
 
 

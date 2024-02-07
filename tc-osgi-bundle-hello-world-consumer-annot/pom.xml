@@ -1,21 +1,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.tc.osgi.bundle</groupId>
+	<groupId>org.tc.osgi.bundle.hello.world</groupId>
 	<artifactId>tc-osgi-bundle-hello-world-consumer-annot</artifactId>
 	<name>${project.artifactId}-${project.version}</name>
 	<packaging>bundle</packaging>
 	<version>${build}${snapshot}</version>
 
 	<properties>
-		<build>0.2.0</build>
-		<hw-provider.version>0.2.0</hw-provider.version>
+		<build>0.11.0</build>
+		<hw-provider.version>0.11.0</hw-provider.version>
 		<snapshot>-SNAPSHOT</snapshot>
 	</properties>
 
 	<parent>
 		<groupId>org.tc.parent</groupId>
 		<artifactId>tc-osgi-parent</artifactId>
-		<version>0.8.1</version>
+		<version>0.11.0-SNAPSHOT</version>
 	</parent>
 
 	<build>
@@ -28,33 +28,18 @@
 						<manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
 					</archive>
 				</configuration>
-				<executions>
-					<execution>
-						<id>assembly</id>
-						<phase>prepare-package</phase>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-						<configuration>
-							<classifier>assembly</classifier>
-							<includes>
-								<include>**/*.class</include>
-								<include>**/*.properties</include>
-								<include>**/*.xml</include>
-							</includes>
-						</configuration>
-					</execution>
-				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
-				<version>4.1.0</version>
-				<extensions>true</extensions>
-				<inherited>true</inherited>
-				<configuration>
-					<exportScr>true</exportScr>
-				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<artifactId>jdeb</artifactId>
+				<groupId>org.vafer</groupId>
 			</plugin>
 		</plugins>
 	</build>
